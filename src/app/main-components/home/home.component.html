@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let app of apps">
+            <div class="card" [style.background-color]="app.secondaryColor" >
+                <div class="imgBx">
+                  <img [src]="app.srcImage">
+                </div>
+                <div class="contentBx">
+                  <h2 [style.color]="app.primaryColor">{{app.name}}</h2>
+                  <div class="size">
+                      <h5>{{app.description}}</h5>
+                  </div>
+                  <a [style.background-color]="app.primaryColor" [style.color]="app.secondaryColor" [routerLink]="app.routerLink">Go to app</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    
+  </div>

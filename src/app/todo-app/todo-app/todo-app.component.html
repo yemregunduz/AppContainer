@@ -1,0 +1,33 @@
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Todo List</h2>
+                <i id="todo-filter" [ngClass]="!isDone? 'far fa-square' : 'far fa-check-square '" (click)="changeStatusAllTodos()"></i>
+            </div>
+            <div class="card-body">
+                <ul class="todo-list" id="todo-list">
+                    <li [ngClass]="todo.isDone ? 'todo-item' : 'todo-item done'" *ngFor="let todo of todos; let i=index" >
+                        {{todo.content}}
+                        <div class="i-group">
+                            <i class="fas fa-trash-alt" (click)="deleteTodo(i)" ></i>
+                            <i [ngClass]="!todo.isDone? 'fas fa-square' :'fas fa-check-square'" (click)="changeStatusTodoItem(todo)" ></i>
+                        </div>
+                        
+                    </li>
+                </ul> 
+            </div>
+            <div class="card-footer"> 
+                <form class="form">
+                    <input  [(ngModel)]="inputTodo" type="text" (keydown.enter)="addToDo()"  [ngModelOptions]="{standalone: true}" id="todo-input" 
+                     placeholder="Add new todo...">
+                     
+                </form>
+                <button id="todo-button" type="submit" (click)="addToDo()" ><i class="fas fa-plus" ></i></button>
+                
+                
+            </div>
+        </div>
+    </div>
+</body>
