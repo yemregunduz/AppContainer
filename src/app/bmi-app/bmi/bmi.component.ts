@@ -23,7 +23,7 @@ export class BmiComponent implements OnInit {
       this.bmiResult=parseFloat(this.bmiResult.toFixed(2))
       if(this.bmiResult<=18.5){
         this.bmiResultText = 'Under weight';
-        this.textColor='#6c62ee'
+        this.textColor='#FF9900'
       }
       else if(this.bmiResult>18.5 && this.bmiResult<=25){
         this.bmiResultText = "Normal"

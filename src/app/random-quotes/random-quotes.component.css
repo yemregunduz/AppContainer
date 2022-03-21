@@ -1,0 +1,58 @@
+body{
+    
+    min-height: 100vh;
+    background-color: #b6bcc2cb;
+    font-family: 'Poppins',sans-serif;
+
+}
+.container{
+    display: flex;
+    max-width: 800px;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+
+}
+.card-header{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #e0e2e4!important;
+
+}
+#primary-card{
+    background-color: #8d9db6;
+    width: 100%;
+    height: 60%;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, .8);
+    border:none
+}
+#secondary-card{
+    overflow-y: auto;
+    margin-top: 15px;
+    height: 60%;
+    border-radius: 10px 0 10px 0;
+    padding: 3px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.button-group{
+    margin-top:2%;
+    display: flex;
+    justify-content: flex-end;
+}
+.button-group>button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 60px;
+    margin-left:10px;
+    background-color: #e0e2e4;
+    border-radius: 10px;
+    border:0 
+}
+.button-retweet:hover{
+    color:#42b883 ;
+}
+.button-twitter:hover{
+    color: #1DA1F2;
+}

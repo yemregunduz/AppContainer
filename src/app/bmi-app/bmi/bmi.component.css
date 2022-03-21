@@ -2,7 +2,7 @@
 body{
     position:relative;
     min-height: 100vh;
-    background-color: #AAAAAA;
+    background-color: #AAAAAA ; 
     font-family: 'Poppins',sans-serif;
 }
 
@@ -98,7 +98,7 @@ body{
     background-color: #a2b9bc;
 }
 .bmi-info .info:nth-child(1){
-    color: #6c62ee
+    color: #FF9900
 }
 .bmi-info .info:nth-child(2){
     color:green

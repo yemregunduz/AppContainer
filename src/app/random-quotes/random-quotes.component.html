@@ -1,0 +1,22 @@
+<body>
+    <div class="container">
+        <div class="card" id="primary-card">
+            <div class="card-header">
+                <h3>Random Quotes App</h3>
+            </div>
+            <div class="card-body">
+                <div class="card" id="secondary-card"  >
+                    <p *ngIf="quote.text!=null" [style.color]="cardColor" >{{quote.text}}</p> 
+                    <p *ngIf="quote.text==null" >
+                        Generate a random quote using the button below and share it via the other button.</p>           
+                    <p ><b *ngIf="quote.author!=null">{{quote.author}}</b> <b *ngIf="quote.author==null">Anonymous</b></p>             
+                </div>
+                <div class="button-group">
+                    <button class="button-retweet" (click)="getRandomQuote()" (click)="generateRandomColor()"><i class="fas fa-retweet fa-lg"></i> </button>
+                    <button class="button-twitter" (click)="shareTweet()" target="_blank"><i class="fab fa-twitter fa-lg"></i> </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>

@@ -42,14 +42,15 @@ body{
 }
 
 .container .card:after{
-  content: 'CreatedBy: Yunus Emre Gündüz';
+  content: 'Created by Yunus Emre Gündüz';
   position: absolute;
-  top: 60%;
-  left: 20%;
-  font-size: 2em;
+  top: 0;
+  left: 3px;
+  
+  font-size: 1em;
   font-weight: 900;
   font-style: italic;
-  color: rgba(255,255,25,0.05)
+  color: rgba(255, 255, 255, 0.15)
 }
 
 .container .card .imgBx{
@@ -99,7 +100,7 @@ body{
   margin: 0;
 }
 
-.container .card .contentBx .size, .container .card .contentBx .color {
+.container .card .contentBx .description{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,19 +111,19 @@ body{
   padding-bottom: 0;
 }
 
-.container .card:hover .contentBx .size{
+.container .card:hover .contentBx .description{
   opacity: 1;
   visibility: visible;
   transition-delay: 0.5s;
 }
 
-.container .card:hover .contentBx .color{
+.container .card:hover {
   opacity: 1;
   visibility: visible;
   transition-delay: 0.6s;
 }
 
-.container .card .contentBx .size h5, .container .card .contentBx .color h3{
+.container .card .contentBx .description h5{
   color: #fff;
   font-weight: 300;
   font-size: 12px;
@@ -150,5 +151,4 @@ body{
   opacity: 1;
   transform: translateY(15px);
   transition-delay: 0.3s;
-  
 }
