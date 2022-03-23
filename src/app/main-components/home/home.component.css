@@ -5,12 +5,19 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+.app{
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
   min-height: 100vh;
-  background: #131313;
+  height: auto;
+  background: linear-gradient(-45deg, #ee7752, #61b429, #1f6781, #23d5ab);
+  background-size: 400%;
+  animation: gradient 15s ease infinite;
+  box-sizing: border-box;
+
 }
 
 .container{
@@ -22,7 +29,7 @@ body{
   width: 320px;
   height: 450px;
   border-radius: 20px;
-  margin-top:2%;
+  margin-top:6%;
   overflow: hidden;
 }
 
@@ -42,11 +49,12 @@ body{
 }
 
 .container .card:after{
-  content: 'Created by Yunus Emre Gündüz';
+  transform:rotate(-25deg);
+  content: 'github.com/yemregunduz';
   position: absolute;
-  top: 0;
-  left: 3px;
-  
+  top: 10%;
+  left: 2%;
+
   font-size: 1em;
   font-weight: 900;
   font-style: italic;
@@ -151,4 +159,8 @@ body{
   opacity: 1;
   transform: translateY(15px);
   transition-delay: 0.3s;
+}
+.header{
+  margin-top: 2%;
+  text-align: center;
 }

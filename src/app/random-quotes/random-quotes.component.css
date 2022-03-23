@@ -1,7 +1,7 @@
 body{
     
     min-height: 100vh;
-    background-color: #b6bcc2cb;
+    background-color: #b6bcc2cb; 
     font-family: 'Poppins',sans-serif;
 
 }
@@ -16,7 +16,7 @@ body{
 .card-header{
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid #e0e2e4!important;
+    border-bottom: 2px solid #b6bcc2cb!important;
 
 }
 #primary-card{

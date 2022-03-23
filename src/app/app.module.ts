@@ -10,6 +10,9 @@ import { HomeComponent } from './main-components/home/home.component';
 import { BmiComponent } from './bmi-app/bmi/bmi.component';
 import { RandomQuotesComponent } from './random-quotes/random-quotes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { WeatherAppComponent } from './weather-app/weather-app.component';
+import { DegreePipe } from './weather-app/pipes/degree.pipe';
+import { DateFormat } from './weather-app/pipes/date.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     BmiComponent,
     RandomQuotesComponent,
+    WeatherAppComponent,
+    DegreePipe,
+    DateFormat,
   ],
   imports: [
     BrowserModule,

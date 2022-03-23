@@ -1,0 +1,135 @@
+<body>
+  <div class="container">
+    <div class="row" style="margin-top:10%">
+      <div class="col-md-6">
+
+        <div class="dynamic-data">
+            
+          <div class="row justify-content-center">
+            <h3 class="header-text">
+              The Weather App
+            </h3>
+            <div class="input-container" >
+              <input 
+              style="display: inline-block;width:350px;"
+                type="text"
+                (keyup.enter)="getWeatherData(city)"
+                [(ngModel)]="city"
+                placeholder="Enter a city..."
+              />
+              <button type="submit" (click)="getWeatherData(city)">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div
+              class="card"
+              style="height: 360px; background-color: #4B515D; color: white;width: 400px;"
+            >
+              <div class="card-body p-4" *ngIf="weather.name != null">
+                <div class="card-header">
+                  <h6 class="flex-grow-1">{{ weather.name }}</h6>
+                  <h6>{{ weather.sys.country }}</h6>
+                </div>
+  
+                <div class="primary-weather-info">
+                  <h6 class="display-4">{{ weather.main.temp | degree }}°C</h6>
+                  <span class="small">{{
+                    weather.weather[0].description
+                  }}</span>
+                </div>
+  
+                <div class="secondary-weather-info">
+                  <div class="weather-info-icon">
+                    <div>
+                      <i class="fas fa-wind fa-fw"></i>
+                      <span class="ms-1"> {{ weather.wind.speed }} m/s </span>
+                    </div>
+                    <div>
+                      <i class="fas fa-tint fa-fw"></i>
+                      <span class="ms-1"> {{ weather.main.humidity }}% </span>
+                    </div>
+                    <div>
+                      <i class="fas fa-sun fa-fw"></i>
+                      <span class="ms-1">
+                        {{ weather.sys.sunrise | dateFormat }}
+                      </span>
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                      [src]="
+                        'http://openweathermap.org/img/wn/' +
+                        weather.weather[0].icon +
+                        '@2x.png'
+                      "
+                      width="120px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" >
+        <div class="row">
+          <div
+            class="col-md-6"
+            *ngFor="let weatherModel of weatherOfMainCities"
+          >
+            <div class="card">
+              <div class="card-body p-4">
+                <div class="card-header">
+                  <h6 class="flex-grow-1">{{ weatherModel.name }}</h6>
+                  <h6>{{ weatherModel.sys.country }}</h6>
+                </div>
+
+                <div class="primary-weather-info">
+                  <h6 class="display-4">
+                    {{ weatherModel.main.temp | degree }}°C
+                  </h6>
+                  <span class="small">{{
+                    weatherModel.weather[0].description
+                  }}</span>
+                </div>
+
+                <div class="secondary-weather-info">
+                  <div class="weather-info-icon">
+                    <div>
+                      <i class="fas fa-wind fa-fw"></i>
+                      <span class="ms-1">
+                        {{ weatherModel.wind.speed }} m/s
+                      </span>
+                    </div>
+                    <div>
+                      <i class="fas fa-tint fa-fw"></i>
+                      <span class="ms-1">
+                        {{ weatherModel.main.humidity }}%
+                      </span>
+                    </div>
+                    <div>
+                      <i class="fas fa-sun fa-fw"></i>
+                      <span class="ms-1">{{
+                        weatherModel.sys.sunrise | dateFormat
+                      }}</span>
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                      [src]="
+                        'http://openweathermap.org/img/wn/' +
+                        weatherModel.weather[0].icon +
+                        '@2x.png'
+                      "
+                      width="120px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
