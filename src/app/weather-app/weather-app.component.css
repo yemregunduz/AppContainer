@@ -12,7 +12,7 @@ body{
 
 }
 .header-text{
-  text-align: center; color: #4B515D; font-weight: bold
+  text-align: center; color: #4B515D; font-weight: bold;font-style: italic;
 }
 .card{
   margin-top:10px;
@@ -81,4 +81,10 @@ body{
 .input-container{
   display: flex;
   justify-content: center;
+}
+.invalid-text{
+  color: red;
+  text-align: center;
+  margin-top:3%;
+  font-style: italic;
 }
