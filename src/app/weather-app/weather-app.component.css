@@ -5,7 +5,7 @@ body{
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
-  opacity: 1; /* Firefox */
+  opacity: 0.6; /* Firefox */
 }
 .container{
   height: 85%;
@@ -59,6 +59,7 @@ body{
 }
 .input-container>input,button:focus{
   outline:0
+  
 }
 .input-container>input{
   border-radius: 10px 0px 0px 10px;

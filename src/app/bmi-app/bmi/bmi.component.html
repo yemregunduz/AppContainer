@@ -21,6 +21,7 @@
                     <button class="reset-button" type="submit" (click)="reset()">Reset</button>
                     <button class="calculate-button" type="submit" (click)="calculate()">Calculate</button>
                 </div>
+                
                 <div class="result">
                     <h4 *ngIf="bmiResult!=0">Your BMI: {{bmiResult}}</h4>
                     <h4 *ngIf="bmiResult==0">Your BMI: </h4>

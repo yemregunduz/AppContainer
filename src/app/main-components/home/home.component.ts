@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
     {name:"Random Quotes",primaryColor:'#8d9db6',secondaryColor:"#b6bcc2cb",description:"You can generate a random quote for sharing", srcImage:"./assets/images/randomQuotes-app.png",routerLink:"randomquotes-app"},
     {name:"Weather App",primaryColor:'white',secondaryColor:"#4B515D",description:"You can get weather information from this application.", srcImage:"./assets/images/weather-app.png",routerLink:"weather-app"}
 
-
   ]
   ngOnInit(): void {
   }
