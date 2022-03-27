@@ -12,12 +12,12 @@ body{
 
 }
 .header-text{
-  text-align: center; color: #4B515D; font-weight: bold;font-style: italic;
+  text-align: center; color: #4B515D; font-weight: bold;font-style: italic;margin-bottom: 10%;
 }
 .card{
   margin-top:10px;
   color:#4B515D;
-  width: 300px;
+  width: 100%;
   border-radius: 35px;
 }
 .card:hover{
@@ -62,8 +62,8 @@ body{
   
 }
 .input-container>input{
+  width: 60%;
   border-radius: 10px 0px 0px 10px;
-  
   text-align: center;
  
 }
