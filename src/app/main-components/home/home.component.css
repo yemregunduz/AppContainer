@@ -47,7 +47,7 @@
 
 .container .card:after {
   transform: rotate(-25deg);
-  content: "SBB Yazılım Park";
+  content: "github.com/yemregunduz";
   position: absolute;
   top: 10%;
   left: 2%;
