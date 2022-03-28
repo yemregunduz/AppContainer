@@ -24,7 +24,7 @@
 
 .container .card {
   position: relative;
-  width: 320px;
+  width: 305px;
   height: 450px;
   border-radius: 20px;
   margin-top: 6%;
@@ -162,8 +162,27 @@
   text-align: center;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen  and (max-width:1200px){
+  .row{
+    justify-content: center;
+  }
+}
+/* @media screen and (max-width: 1200px ) {
+  .col-md-6{
+    display:none
+  }
+  .col-md-4{
+    display:flex
+  }
   .container .card {
     width: 100%;
   }
 }
+@media screen and (max-width: 992px){
+  .col-md-4{
+    display: none;
+  }
+  .col-md-6{
+    display: flex;
+  }
+} */

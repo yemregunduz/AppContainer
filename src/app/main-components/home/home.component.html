@@ -3,8 +3,8 @@
   <div class="container">
 
     <h3 class="header" >Angular Workplace - Yunus Emre Gündüz</h3>
-    <div class="row">
-        <div class="col-md-4" *ngFor="let app of apps">
+    <div class="row ">
+        <div class="col-md-auto" align="center"  *ngFor="let app of apps">
             <div class="card" [style.background-color]="app.secondaryColor" >
                 <div class="imgBx">
                   <img [src]="app.srcImage">
