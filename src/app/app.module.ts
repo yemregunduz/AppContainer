@@ -14,6 +14,7 @@ import { WeatherAppComponent } from './weather-app/weather-app.component';
 import { DegreePipe } from './weather-app/pipes/degree.pipe';
 import { DateFormat } from './weather-app/pipes/date.pipe';
 import { MovieAppModule } from './movie-app/movie-app.module';
+import { GithubReposAppComponent } from './github-repos-app/github-repos-app.component';
 
 
 
@@ -27,6 +28,7 @@ import { MovieAppModule } from './movie-app/movie-app.module';
     WeatherAppComponent,
     DegreePipe,
     DateFormat,
+    GithubReposAppComponent,
 
   ],
   imports: [

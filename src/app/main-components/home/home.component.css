@@ -167,22 +167,3 @@
     justify-content: center;
   }
 }
-/* @media screen and (max-width: 1200px ) {
-  .col-md-6{
-    display:none
-  }
-  .col-md-4{
-    display:flex
-  }
-  .container .card {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 992px){
-  .col-md-4{
-    display: none;
-  }
-  .col-md-6{
-    display: flex;
-  }
-} */

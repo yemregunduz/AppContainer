@@ -1,0 +1,60 @@
+<body>
+
+      
+
+      <div class="container " >
+        <h3 >Get all public github repositories with username </h3>
+        <h3 *ngIf="isUserFound">
+             <a  [attr.href]="owner.html_url" target="_blank" align="center" >View on github({{owner.login}})</a>
+        </h3>
+      
+        <div class="input-container">
+            <input
+              placeholder="Enter a github username(def:yemregunduz)"
+              type="text"
+              [(ngModel)]="username" 
+              (keyup.enter)="getAllRepositoriesOfUser(username)"
+              (keyup.enter)="getUserInfo(username)"
+            />
+            <button class="search-button" (click)="getUserInfo(username)" (click)="getAllRepositoriesOfUser(username)"><i class="fas fa-search"></i></button>  
+        </div>
+        <h3 style="margin-top:1%">
+            <span *ngIf="isUserFound && !isRepositoryFound" class="badge rounded-pill bg-danger">No public repository found for the user</span>
+            <span *ngIf="!isUserFound" class="badge rounded-pill bg-danger">
+                The user is not registered on github.
+            </span>
+        </h3>
+        <div class="row gutters" *ngIf="repos.length>0" >
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="card" >
+              <div class="card-body">
+                <!-- Timeline start -->
+                <div class="timeline">
+
+                  <div class="timeline-row" *ngFor="let repo of repos">
+                    <div class="timeline-time">
+                      {{repo.created_at | date:'dd.MM.yyyy'}}<small>{{repo.created_at | date:'hh:mm'}}</small>
+                    </div>
+
+                    <div class="timeline-content sea-green">
+
+                      <h4>{{repo.name}}</h4> 
+                      <p *ngIf="repo.description">
+                        {{repo.description}}
+                      </p>
+                      <p *ngIf="repo.description==null">
+                        There is no description in this repository   
+                      </p>
+                      <div>
+                        <span class="badge" >{{repo.language}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</body>

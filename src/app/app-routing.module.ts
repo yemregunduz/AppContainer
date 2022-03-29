@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BmiComponent } from './bmi-app/bmi/bmi.component';
+import { GithubReposAppComponent } from './github-repos-app/github-repos-app.component';
 import { HomeComponent } from './main-components/home/home.component';
 import { MovieAppLayoutComponent } from './movie-app/movie-app-layout/movie-app-layout.component';
 import { RandomQuotesComponent } from './random-quotes/random-quotes.component';
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path:"randomquotes-app",component:RandomQuotesComponent},
   {path:"bmicalculator-app",component:BmiComponent},
   {path:"todo-app",component:TodoAppComponent},
-  {path:"weather-app",component:WeatherAppComponent}
+  {path:"weather-app",component:WeatherAppComponent},
+  {path:"githubrepos-app",component:GithubReposAppComponent}
 
 ];
 
