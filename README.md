@@ -1,9 +1,9 @@
 # AppContainer
 I wanted to gather the projects made by everyone who started learning software under a single project. I think about adding new projects every day<hr>
-###Get Started
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.<hr>
+#### Get Started
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
 
-###Installation Process
+#### Installation Process
 Run npm install to install all the required dependencies
 Run ng serve for a dev server. Navigate to http://localhost:4200/
 The app will automatically reload if you change any of the source files.
