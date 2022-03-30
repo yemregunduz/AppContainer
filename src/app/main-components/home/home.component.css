@@ -27,7 +27,7 @@
   width: 305px;
   height: 450px;
   border-radius: 20px;
-  margin-top: 6%;
+  margin-bottom: 4%;
   overflow: hidden;
 }
 
@@ -159,6 +159,7 @@
 
 .header {
   margin-top: 2%;
+  margin-bottom: 2%;
   text-align: center;
 }
 
