@@ -15,7 +15,8 @@ export class HomeComponent implements OnInit {
     {name:"BMI Calculator",primaryColor:'#a9c25d',secondaryColor:"#AAAAAA",description:"You can calculate your body mass index.", srcImage:"./assets/images/bmiCalculator-app.png",routerLink:"bmicalculator-app"},
     {name:"Random Quotes",primaryColor:'#8d9db6',secondaryColor:"#b6bcc2cb",description:"You can generate a random quote for sharing", srcImage:"./assets/images/randomQuotes-app.png",routerLink:"randomquotes-app"},
     {name:"Weather App",primaryColor:'white',secondaryColor:"#4B515D",description:"You can get weather information from this application.", srcImage:"./assets/images/weather-app.png",routerLink:"weather-app"},
-    {name:"Github Repos App",primaryColor:'#ff5000',secondaryColor:"#1379bb",description:"You can list users' public repositories on github.", srcImage:"./assets/images/github-repos-app.png",routerLink:"githubrepos-app"},
+    {name:"GitRepos App",primaryColor:'#ff5000',secondaryColor:"#1379bb",description:"You can list users' public repositories on github.", srcImage:"./assets/images/github-repos-app.png",routerLink:"githubrepos-app"},
+    {name:"Notes App",primaryColor:'white',secondaryColor:"#ffcab0",description:"You can save and delete notes.", srcImage:"./assets/images/notes-app.png",routerLink:"notes-app"},
 
   ]
   ngOnInit(): void {

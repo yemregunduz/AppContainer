@@ -15,7 +15,8 @@ import { DegreePipe } from './weather-app/pipes/degree.pipe';
 import { DateFormat } from './weather-app/pipes/date.pipe';
 import { MovieAppModule } from './movie-app/movie-app.module';
 import { GithubReposAppComponent } from './github-repos-app/github-repos-app.component';
-
+import { NotesAppComponent } from './notes-app/notes-app.component';
+import { FilterPipe } from './notes-app/pipes/filter.pipe';
 
 
 @NgModule({
@@ -29,6 +30,8 @@ import { GithubReposAppComponent } from './github-repos-app/github-repos-app.com
     DegreePipe,
     DateFormat,
     GithubReposAppComponent,
+    NotesAppComponent,
+    FilterPipe,
 
   ],
   imports: [

@@ -1,0 +1,34 @@
+<body>
+    <div class="container">
+        <div class="card" id="input-card">
+          <textarea
+            (keyup.enter)="createNote()"
+            rows="10"
+            placeholder="Enter your note (default color: 'white')"
+            [(ngModel)]="noteContent"
+          ></textarea>
+          <div class="card-footer">
+            <div class="color-buttons-container">
+              <button
+                class="color-button"
+                (click)="changeSelectedColor(color)"
+                [style.background-color]="color"
+                *ngFor="let color of colors"
+              ></button>
+            </div>
+            <button class="add-button" (click)="createNote()">Add</button>
+          </div>
+        </div>
+        <input type="text" [(ngModel)]="filterText" placeholder="Search for notes " />
+        <div class="row" *ngIf="notes.length > 0">
+          <div class="col-md-auto" *ngFor="let note of notes | filter:filterText ; let i=index">
+            <div class="card" [style.background-color]="note.color" id="note-card">
+              <button class="delete-button" (click)="deleteNote(i)"><i class="fas fa-trash"></i></button>
+              <h6>{{note.content}}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
+
