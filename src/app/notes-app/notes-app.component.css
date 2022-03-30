@@ -1,5 +1,5 @@
 body{
-    background-color: #ffcab0;
+    background-color:#f4aeba;
     position: relative;
     padding: 20px;
     position:relative;
@@ -73,7 +73,7 @@ textarea:focus{
 .delete-button{
     border:none;
     background-color: inherit;
-    color: rgb(248, 106, 106);
+    color: rgb(155, 10, 39);
     display: flex;
     margin:5px 5px 0 0;
     position: absolute;
@@ -83,7 +83,7 @@ textarea:focus{
     
 }
 .delete-button:hover{
-    color: red;
+    color:red ;
 }
 h6{
     text-indent:6%;
