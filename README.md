@@ -7,7 +7,7 @@ I wanted to gather the projects made by everyone who started learning software u
 - Random Quotes App
 - Github Repos App
 - Notes App
-
+- Chart App
 ------------
 
 
