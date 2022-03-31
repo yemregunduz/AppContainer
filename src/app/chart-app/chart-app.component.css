@@ -1,0 +1,74 @@
+body{
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #AAAA;
+}
+
+input[type="file"]{
+    border: 0;
+    padding: 6px 12px; 
+    border-radius: 5px;
+    margin-bottom:5px;
+}
+input[type="file"]::file-selector-button{
+    background-color:#79c2d0;
+    border-radius: 5px;
+    border:0;
+    padding:10px;
+    cursor: pointer;
+}
+.card{
+    margin-bottom: 2%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+.form-select{
+    border: 2px solid #79c2d0 !important;
+}
+.form-select:focus{
+    border:0;
+}
+.col-md-9> .card{
+    min-height: 100%;
+}
+.form-select:focus {
+    border-color: #79c2d0;
+    box-shadow: inset 0 1px 1px rgba(215, 236, 216, 0.075), 0 0 8px #79c2d0;
+  }
+.create-button:hover{
+    background-color: #79c2d0;
+    color: white;
+}
+.create-button{
+    padding:5px 12px;
+    background-color: white;
+    border: 2px solid #79c2d0;
+    color: #79c2d0;
+    border-radius: 5px;
+}
+.create-button:focus{
+    outline: 0;
+}
+#divChart{
+    width: 80%;
+    height: 80%;
+    align-self: center;
+}
+.download-button{
+    border:0;
+    background-color: white;
+    border:2px solid green;
+    color: green;
+    padding: 5px 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.download-button:hover{
+    background-color: green;
+    color:white;
+}
+.download-button>i{
+    margin-left: 5px;
+}

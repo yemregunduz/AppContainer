@@ -1,0 +1,64 @@
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <input type="file" appReadExcel (eventEmitter)="dataFromEventEmitter($event)" (change)="onInputChange()"  accept=".xls,.xlsx"/>
+                    <form [formGroup]="chartInfoForm" *ngIf="columns.length > 0">
+                      <select
+                        class="form-select form-select-md mb-3"
+                        formControlName="labelProperty"
+                        *ngIf="columns.length > 0"
+                      >
+                        <option value="">Select a column as label </option>
+                        <option [value]="column" *ngFor="let column of columns">
+                          {{ column }}
+                        </option>
+                      </select>
+                      <select
+                        class="form-select form-select-md mb-3"
+                        formControlName="dataProperty"
+                        *ngIf="columns.length > 0"
+                      >
+                        <option value="">Select a column as data </option>
+                        <option [value]="column" *ngFor="let column of columns">
+                          {{ column }}
+                        </option>
+                      </select>
+                      <select
+                        class="form-select form-select-md mb-3"
+                        formControlName="chartTypeProperty"
+                        *ngIf="columns.length > 0"
+                      >
+                        <option selected value="">Select chart type</option>
+                        <option [value]="chartType" *ngFor="let chartType of chartTypes">
+                          {{ chartType }}
+                        </option>
+                      </select>
+                      <button class="create-button" (click)="submitForm()">
+                        Create Chart
+                      </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="card">
+                    <h4 style="text-align:center" *ngIf="myChart==null">
+                      Upload an Excel File then select your <b style="color: red;">Label, data column </b>and <b style="color: red;">chart type</b>
+                    </h4>
+                    <div id="divChart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+                <button class="download-button" *ngIf="myChart!=null" (click)="downloadChart()">Download chart as PNG <i class="fas fa-download"></i></button>
+            </div>
+        </div>
+        
+        
+
+    </div>
+            
+    
+</body>
+

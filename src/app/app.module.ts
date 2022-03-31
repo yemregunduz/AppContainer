@@ -17,6 +17,9 @@ import { MovieAppModule } from './movie-app/movie-app.module';
 import { GithubReposAppComponent } from './github-repos-app/github-repos-app.component';
 import { NotesAppComponent } from './notes-app/notes-app.component';
 import { FilterPipe } from './notes-app/pipes/filter.pipe';
+import { ChartAppComponent } from './chart-app/chart-app.component';
+import { ReadExcelDirective } from './chart-app/directives/read-excel.directive';
+import { ToastrModule } from 'ngx-toastr'
 
 
 @NgModule({
@@ -32,6 +35,8 @@ import { FilterPipe } from './notes-app/pipes/filter.pipe';
     GithubReposAppComponent,
     NotesAppComponent,
     FilterPipe,
+    ChartAppComponent,
+    ReadExcelDirective,
 
   ],
   imports: [
@@ -41,7 +46,12 @@ import { FilterPipe } from './notes-app/pipes/filter.pipe';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot({
+      positionClass:"toast-bottom-right",
+      closeButton:true,
+      timeOut:2000,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
