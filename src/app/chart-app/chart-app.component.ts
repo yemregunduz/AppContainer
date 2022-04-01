@@ -55,11 +55,16 @@ export class ChartAppComponent implements OnInit {
           y: {
             beginAtZero: true,
           },
-
         },
+        plugins:{
+          options:{
+            anchor:'end'
+          }
+        }
         
       },
-      plugins:[ChartDataLabels]
+      plugins:[ChartDataLabels],
+
 
           
     });

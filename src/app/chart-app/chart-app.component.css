@@ -72,3 +72,17 @@ input[type="file"]::file-selector-button{
 .download-button>i{
     margin-left: 5px;
 }
+@media only screen and (max-width:700px) {
+    #divChart{
+        width: 90%;
+        height: 90%;
+    }
+}
+@media only screen and (max-width:400px) {
+    #divChart{
+        width: 320px;
+        height: 320px;
+    }
+
+   
+}
