@@ -1,88 +1,101 @@
-body{
-  min-height: 100vh;
-  padding: 20px;
-  background-color: #393e46;
+body {
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #393e46;
 }
 
-input[type="file"]{
-    border: 0;
-    padding: 6px 12px; 
-    border-radius: 5px;
-    margin-bottom:5px;
-}
-input[type="file"]::file-selector-button{
-    background-color:#79c2d0;
-    border-radius: 5px;
-    border:0;
-    padding:10px;
-    cursor: pointer;
-}
-.card{
+.card {
     margin-bottom: 2%;
     padding: 15px;
     display: flex;
     justify-content: center;
 }
-.form-select{
-    border: 2px solid #79c2d0 !important;
-}
-.form-select:focus{
-    border:0;
-}
-.col-md-9> .card{
+
+.col-md-9>.card {
     min-height: 100%;
 }
+
+#divChart {
+    width: 80%;
+    height: 80%;
+    align-self: center;
+}
+
+input[type="file"] {
+    border: 0;
+    padding: 6px 12px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #79c2d0;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.form-select {
+    border: 2px solid #79c2d0 !important;
+}
+
+.form-select:focus {
+    border: 0;
+}
+
 .form-select:focus {
     border-color: #79c2d0;
     box-shadow: inset 0 1px 1px rgba(215, 236, 216, 0.075), 0 0 8px #79c2d0;
-  }
-.create-button:hover{
+}
+
+.create-button:hover {
     background-color: #79c2d0;
     color: white;
 }
-.create-button{
-    padding:5px 12px;
+
+.create-button {
+    padding: 5px 12px;
     background-color: white;
     border: 2px solid #79c2d0;
     color: #79c2d0;
     border-radius: 5px;
 }
-.create-button:focus{
+
+.create-button:focus {
     outline: 0;
 }
-#divChart{
-    width: 80%;
-    height: 80%;
-    align-self: center;
-}
-.download-button{
-    border:0;
+
+.download-button {
+    border: 0;
     background-color: white;
-    border:2px solid green;
+    border: 2px solid green;
     color: green;
     padding: 5px 12px;
     border-radius: 10px;
     display: flex;
     align-items: center;
 }
-.download-button:hover{
+
+.download-button:hover {
     background-color: green;
-    color:white;
+    color: white;
 }
-.download-button>i{
+
+.download-button>i {
     margin-left: 5px;
 }
-@media only screen and (max-width:700px) {
-    #divChart{
+
+@media only screen and (max-width: 700px) {
+    #divChart {
         width: 90%;
         height: 90%;
     }
 }
-@media only screen and (max-width:400px) {
-    #divChart{
+
+@media only screen and (max-width: 400px) {
+    #divChart {
         width: 320px;
         height: 320px;
     }
-
-   
 }

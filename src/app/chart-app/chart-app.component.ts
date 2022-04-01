@@ -11,27 +11,33 @@ Chart.register(...registerables);
   styleUrls: ['./chart-app.component.css'],
 })
 export class ChartAppComponent implements OnInit {
-  chartInfoForm:FormGroup
+  chartInfoForm: FormGroup;
   chartTypes: string[] = ['bar', 'radar', 'doughnut', 'pie', 'polarArea'];
   columns: any[] = [];
   data: any[];
   myChart: Chart;
-  numberFormatter  = new Intl.NumberFormat();
-  constructor(private formBuilder: FormBuilder,private toastrService:ToastrService) {}
+  numberFormatter = new Intl.NumberFormat();
+  constructor(
+    private formBuilder: FormBuilder,
+    private toastrService: ToastrService
+  ) {}
   ngOnInit(): void {
-    this.createChartInfoForm()
-    console.log(this.numberFormatter.format(3500000))
+    this.createChartInfoForm();
   }
 
-  createChartInfoForm(){
+  createChartInfoForm() {
     this.chartInfoForm = this.formBuilder.group({
-      labelProperty:["",Validators.required],
-      dataProperty:["",Validators.required],
-      chartTypeProperty:["",Validators.required],
-      
-    })
+      labelProperty: ['', Validators.required],
+      dataProperty: ['', Validators.required],
+      chartTypeProperty: ['', Validators.required],
+    });
   }
-  createDynamicChart(chartData:any[],chartLabels:any[],chartType:any,datasetLabel:any) {
+  createDynamicChart(
+    chartData: any[],
+    chartLabels: any[],
+    chartType: any,
+    datasetLabel: any
+  ) {
     if (this.myChart != null) {
       this.myChart.destroy();
     }
@@ -43,11 +49,13 @@ export class ChartAppComponent implements OnInit {
           {
             label: datasetLabel,
             data: chartData,
-            backgroundColor: this.createRandomColorsForChart(chartData.length,0.3),
-            borderColor:this.createRandomColorsForChart(chartData.length,1),
+            backgroundColor: this.createRandomColorsForChart(
+              chartData.length,
+              0.3
+            ),
+            borderColor: this.createRandomColorsForChart(chartData.length, 1),
             borderWidth: 1,
-            
-          }
+          },
         ],
       },
       options: {
@@ -56,72 +64,73 @@ export class ChartAppComponent implements OnInit {
             beginAtZero: true,
           },
         },
-        plugins:{
-          options:{
-            anchor:'end'
-          }
-        }
-        
+        plugins: {
+          options: {
+            anchor: 'end',
+          },
+        },
       },
-      plugins:[ChartDataLabels],
-
-
-          
+      plugins: [ChartDataLabels],
     });
   }
-  submitForm(){
-    if(this.chartInfoForm.valid){
+  submitForm() {
+    if (this.chartInfoForm.valid) {
       let chartData = this.data.map((val) => {
-        return val[this.chartInfoForm.controls["dataProperty"].value] 
+        return val[this.chartInfoForm.controls['dataProperty'].value];
       });
-      let chartLabels = this.data.map((val)=>{
-        return val[this.chartInfoForm.controls["labelProperty"].value];
-      })
-      let chartType = this.chartInfoForm.controls["chartTypeProperty"].value
-      this.createDynamicChart(chartData,chartLabels,chartType,this.chartInfoForm.controls["dataProperty"].value)
+      let chartLabels = this.data.map((val) => {
+        return val[this.chartInfoForm.controls['labelProperty'].value];
+      });
+      let chartType = this.chartInfoForm.controls['chartTypeProperty'].value;
+      this.createDynamicChart(
+        chartData,
+        chartLabels,
+        chartType,
+        this.chartInfoForm.controls['dataProperty'].value
+      );
+    } else {
+      this.toastrService.error(
+        'Please select all features completely',
+        'Validation Error!'
+      );
     }
-    else{
-      this.toastrService.error("Please select all features completely","Validation Error!")
-    }
-   
-    
   }
   dataFromEventEmitter(data: any[]) {
-    if(data){
-      this.columns = Object.getOwnPropertyNames(data[0])
-      //delete row information from column array 
-      this.columns.shift()
+    if (data) {
+      this.columns = Object.getOwnPropertyNames(data[0]);
+      //delete row information from column array
+      this.columns.shift();
       this.data = data;
     }
   }
-  onInputChange(){
-    if(this.myChart)
-    this.myChart.destroy()
+  onInputChange() {
+    if (this.myChart) this.myChart.destroy();
   }
-  createRandomColorsForChart(colorCount:number,opacity:number):string[]{
-    let colorArrayForLabels=[]
-    
+  createRandomColorsForChart(colorCount: number, opacity: number): string[] {
+    let colorArrayForLabels = [];
+
     for (let i = 0; i < colorCount; i++) {
-      var num = Math.round(0xffffff*Math.random());
+      var num = Math.round(0xffffff * Math.random());
       var r = num >> 16;
-      var g = num >> 8&255;
+      var g = (num >> 8) & 255;
       var b = num & 255;
-      colorArrayForLabels.push('rgb(' + r + ', ' + g + ', ' + b + ', '+opacity + ')')
+      colorArrayForLabels.push(
+        'rgb(' + r + ', ' + g + ', ' + b + ', ' + opacity + ')'
+      );
     }
     return colorArrayForLabels;
   }
-  downloadChart(){
-    var canvas =  document.getElementById("myChart") as HTMLCanvasElement;
-    if(this.myChart!=null){
-      var img   = canvas.toDataURL("image/png");
-      let link = document.createElement("a");
+  downloadChart() {
+    var canvas = document.getElementById('myChart') as HTMLCanvasElement;
+    if (this.myChart != null) {
+      var img = canvas.toDataURL('image/png', 'high');
+      let link = document.createElement('a');
       link.href = img;
-      link.setAttribute('visibility','hidden');
-      link.download = this.chartInfoForm.controls["dataProperty"].value
+      link.setAttribute('visibility', 'hidden');
+      link.download = this.chartInfoForm.controls['dataProperty'].value;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     }
-  
   }
 }
