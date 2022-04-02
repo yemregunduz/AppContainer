@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
     {name:"GitRepos App",primaryColor:'#ff5000',secondaryColor:"#1379bb",description:"You can list users' public repositories on github.", srcImage:"./assets/images/github-repos-app.png",routerLink:"githubrepos-app"},
     {name:"Notes App",primaryColor:'white',secondaryColor:"#f4aeba",description:"You can save and delete notes.", srcImage:"./assets/images/notes-app.png",routerLink:"notes-app"},
     {name:"Chart App",primaryColor:' #393e46',secondaryColor:"#79c2d0",description:"You can create dynamic charts with the column names in the excel you have uploaded.", srcImage:"./assets/images/chart-app.png",routerLink:"chart-app"},
+    {name:"Markdown Editor App",primaryColor:'#347474',secondaryColor:" #ffcbcb",description:"A basic markdown previewer and downloader", srcImage:"./assets/images/markdownEditor-app.png",routerLink:"markdowneditor-app"},
   ]
   ngOnInit(): void {
   }

@@ -19,7 +19,9 @@ import { NotesAppComponent } from './notes-app/notes-app.component';
 import { FilterPipe } from './notes-app/pipes/filter.pipe';
 import { ChartAppComponent } from './chart-app/chart-app.component';
 import { ReadExcelDirective } from './chart-app/directives/read-excel.directive';
-import { ToastrModule } from 'ngx-toastr'
+import { ToastrModule } from 'ngx-toastr';
+import { MarkdownEditorAppComponent } from './markdown-editor-app/markdown-editor-app.component';
+import { SanitizeHtmlPipe } from './markdown-editor-app/pipes/sanitize-html.pipe';
 
 
 @NgModule({
@@ -37,6 +39,8 @@ import { ToastrModule } from 'ngx-toastr'
     FilterPipe,
     ChartAppComponent,
     ReadExcelDirective,
+    MarkdownEditorAppComponent,
+    SanitizeHtmlPipe,
 
   ],
   imports: [

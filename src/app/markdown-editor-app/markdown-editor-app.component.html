@@ -1,0 +1,23 @@
+<div class="app-container">
+  <textarea 
+    name="markdown"
+    id="markdown-area"
+    [(ngModel)]="text"
+    (keyup)="updateOutput()"
+    placeholder="Enter your markdown here"
+  ></textarea>
+
+  <div class="card" #autoScroll>
+    <div class="card-header">
+      <h5>Markdown Previewer</h5>
+    </div>
+    <div class="card-body">
+      <div id="textDiv" [innerHTML]="convertedText | sanitizeHtml"></div>
+    </div>
+    <div class="card-footer">
+        <button class="download-button" (click)="downloadAsMdFile()">Download as md </button>
+    </div>
+  </div>
+</div>
+
+

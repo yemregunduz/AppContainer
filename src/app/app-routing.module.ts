@@ -4,6 +4,7 @@ import { BmiComponent } from './bmi-app/bmi/bmi.component';
 import { ChartAppComponent } from './chart-app/chart-app.component';
 import { GithubReposAppComponent } from './github-repos-app/github-repos-app.component';
 import { HomeComponent } from './main-components/home/home.component';
+import { MarkdownEditorAppComponent } from './markdown-editor-app/markdown-editor-app.component';
 import { MovieAppLayoutComponent } from './movie-app/movie-app-layout/movie-app-layout.component';
 import { NotesAppComponent } from './notes-app/notes-app.component';
 import { RandomQuotesComponent } from './random-quotes/random-quotes.component';
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:"weather-app",component:WeatherAppComponent},
   {path:"githubrepos-app",component:GithubReposAppComponent},
   {path:"notes-app",component:NotesAppComponent},
-  {path:"chart-app",component:ChartAppComponent}
+  {path:"chart-app",component:ChartAppComponent},
+  {path:"markdowneditor-app",component:MarkdownEditorAppComponent}
 
 ];
 
