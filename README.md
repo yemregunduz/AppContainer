@@ -8,6 +8,7 @@ I wanted to gather the projects made by everyone who started learning software u
 - Github Repos App
 - Notes App
 - Chart App
+- Markdown Editor App (Continue to be developed)
 ------------
 
 
