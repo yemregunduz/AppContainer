@@ -25,8 +25,6 @@ export class MarkdownEditorAppComponent implements OnInit {
       this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight; 
   }
   downloadAsMdFile(){
-    console.log("at")
-    var div = document.getElementById('textDiv') as HTMLDivElement;
     var textFileAsBlob = new Blob([this.text], {type:'text/plain'}); 
       let link = document.createElement('a');
       link.setAttribute('visibility', 'hidden');
@@ -36,6 +34,4 @@ export class MarkdownEditorAppComponent implements OnInit {
       link.click();
       document.body.removeChild(link);
     }
-
-  
 }
