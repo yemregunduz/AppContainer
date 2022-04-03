@@ -4,6 +4,7 @@
         <div class="card">
             <div class="card-header">
                 <h3 style="text-align:center;color: #bb7171;">10 Fingers Test & Practice</h3>
+                <h6 style="text-align: center;"><small>(Confirmation key: SPACE)</small></h6>
             </div>
             <div class="card-body" *ngIf="words.length>0">
                 <h3><span [attr.id]="'word'+i" [ngClass]="words[index]==words[i]? 'badge bg-secondary' : 'badge'" *ngFor="let word of randomWords; let i=index">{{word.inEnglish}}</span></h3>

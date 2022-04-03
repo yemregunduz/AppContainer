@@ -17,19 +17,18 @@ body{
     color: black;
     text-transform: lowercase;
     width: 150px;
-    padding: 2px 12px;
-}
-.badge-selected {
-    background-color: 	rgb(232,232,232);
-    text-transform: lowercase;
-    padding: 2px 12px;
-    border-radius: 5px;
-    width: 150px;
+    padding: 4px 12px;
 }
 #resultCard{
     margin-bottom: 2%;
     width: 280px;
     height: 320px;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
 }
 #resultCard:hover .delete-button{
     display: flex;
@@ -45,17 +44,11 @@ body{
     visibility: hidden;
     top: 0;
     right: 0;
-    
 }
 .delete-button:hover{
     color:red ;
 }
-.card-footer{
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    align-items: center;
-}
+
 input{
     width: 90%;
     padding: 10px;
