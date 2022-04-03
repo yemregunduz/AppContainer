@@ -8,6 +8,7 @@ import { MarkdownEditorAppComponent } from './markdown-editor-app/markdown-edito
 import { MovieAppLayoutComponent } from './movie-app/movie-app-layout/movie-app-layout.component';
 import { NotesAppComponent } from './notes-app/notes-app.component';
 import { RandomQuotesComponent } from './random-quotes/random-quotes.component';
+import { TenFingersAppComponent } from './ten-fingers-app/ten-fingers-app.component';
 import { TodoAppComponent } from './todo-app/todo-app/todo-app.component';
 import { WeatherAppComponent } from './weather-app/weather-app.component';
 
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path:"githubrepos-app",component:GithubReposAppComponent},
   {path:"notes-app",component:NotesAppComponent},
   {path:"chart-app",component:ChartAppComponent},
-  {path:"markdowneditor-app",component:MarkdownEditorAppComponent}
+  {path:"markdowneditor-app",component:MarkdownEditorAppComponent},
+  {path:"tenfingers-app",component:TenFingersAppComponent}
 
 ];
 

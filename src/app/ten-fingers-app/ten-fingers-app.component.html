@@ -1,0 +1,43 @@
+<body>
+  <div class="app-container">
+    <div class="row" >
+        <div class="card">
+            <div class="card-header">
+                <h3 style="text-align:center;color: #bb7171;">10 Fingers Test & Practice</h3>
+            </div>
+            <div class="card-body" *ngIf="words.length>0">
+                <h3><span [attr.id]="'word'+i" [ngClass]="words[index]==words[i]? 'badge bg-secondary' : 'badge'" *ngFor="let word of randomWords; let i=index">{{word.inEnglish}}</span></h3>
+            </div>
+            <div class="card-footer">
+                <input type="text" id="wordInput" [(ngModel)]="selectedWord" (keyup)="checkLettersMatch(index)"  (keyup.space)="checkWordsMatch(index)" (keypress)="startCountdown()">
+                <button class="reset-button" (click)="restartGame()"><b></b><i style="margin-left: 3px;" class="fas fa-retweet fa-lg" ></i></button>
+                <span ><b>{{counter}}</b></span>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:2%;justify-content: center;" *ngIf="results.length>0">
+        <div class="col-md-auto" *ngFor="let result of results; let i = index">
+            <div id="resultCard" class="card">
+                <button class="delete-button" (click)="removeResult(i)" ><i class="fas fa-trash"></i></button>
+                <div class="card-header">
+                    <h6 class="display-6">{{result.wordsPerMinute}} WPM</h6> 
+                    <h6 class="wpm-description">(Words per minute)</h6> 
+                </div>
+                <div class="card-body">
+                    
+                    <div class="result-info">
+                        <h6>Keystrokes: 
+                            (<small class="keystroke-wrong">{{result.wrongKeystrokes}}</small>  |
+                             <small class="keystroke-correct">{{result.correctKeystrokes}}</small>) &nbsp;&nbsp;
+                             <b class="keystroke-total">{{result.correctKeystrokes+result.wrongKeystrokes}}</b>
+                        </h6><hr>
+                        <h6>Accuracy: <b class="correct-word" [style.color]="result.accuracy>75 ? 'green' : 'red'">%{{result.accuracy}}</b></h6><hr>
+                        <h6>Correct words: <b class="correct-word">{{result.correctAnswerCount}}</b></h6><hr>
+                        <h6>Wrong words: <b class="wrong-word">{{result.wrongAnswerCount}}</b></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>     
+</body>

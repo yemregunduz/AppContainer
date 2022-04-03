@@ -1,0 +1,104 @@
+body{
+    min-height: 100vh;
+    background-color: #bb7171;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app-container{
+    width: 60rem;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  
+}
+.badge{
+    color: black;
+    text-transform: lowercase;
+    width: 150px;
+    padding: 2px 12px;
+}
+.badge-selected {
+    background-color: 	rgb(232,232,232);
+    text-transform: lowercase;
+    padding: 2px 12px;
+    border-radius: 5px;
+    width: 150px;
+}
+#resultCard{
+    margin-bottom: 2%;
+    width: 280px;
+    height: 320px;
+}
+#resultCard:hover .delete-button{
+    display: flex;
+    visibility: visible;
+}
+.delete-button{
+    border:none;
+    background-color: inherit;
+    color: rgb(155, 10, 39);
+    display: flex;
+    margin:5px 5px 0 0;
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    
+}
+.delete-button:hover{
+    color:red ;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+}
+input{
+    width: 90%;
+    padding: 10px;
+    border:0;
+    background-color: #bb7171;
+    border-radius: 5px;
+    font-weight: 600;
+}
+input:focus{
+    outline:0
+}
+.reset-button{
+    padding: 10px;
+    border:0;
+    background-color: #bb7171;
+    border-radius: 5px;
+}
+.reset-button:hover{
+    background-color: #df9292;
+
+}
+.display-6{
+    font-weight: 600;
+    text-align: center;
+    color: green
+}
+.wpm-description{
+    text-align: center;
+}
+.keystroke-correct{
+    color: green;
+}
+.keystroke-wrong{
+    color: red;
+}
+.keystroke-total, .correct-word, .wrong-word{
+    float: right;
+}
+.correct-word{
+    color: green;
+}
+.wrong-word{
+    color: red;
+}
+
+

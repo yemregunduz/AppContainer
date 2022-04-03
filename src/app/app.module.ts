@@ -22,6 +22,8 @@ import { ReadExcelDirective } from './chart-app/directives/read-excel.directive'
 import { ToastrModule } from 'ngx-toastr';
 import { MarkdownEditorAppComponent } from './markdown-editor-app/markdown-editor-app.component';
 import { SanitizeHtmlPipe } from './markdown-editor-app/pipes/sanitize-html.pipe';
+import { TenFingersAppComponent } from './ten-fingers-app/ten-fingers-app.component';
+
 
 
 @NgModule({
@@ -41,6 +43,8 @@ import { SanitizeHtmlPipe } from './markdown-editor-app/pipes/sanitize-html.pipe
     ReadExcelDirective,
     MarkdownEditorAppComponent,
     SanitizeHtmlPipe,
+    TenFingersAppComponent,
+
 
   ],
   imports: [
