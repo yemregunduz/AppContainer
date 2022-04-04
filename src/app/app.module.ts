@@ -23,6 +23,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { MarkdownEditorAppComponent } from './components/markdown-editor-app/markdown-editor-app.component';
 import { SanitizeHtmlPipe } from './components/markdown-editor-app/pipes/sanitize-html.pipe';
 import { TenFingersAppComponent } from './components/ten-fingers-app/ten-fingers-app.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 
@@ -59,7 +60,8 @@ import { TenFingersAppComponent } from './components/ten-fingers-app/ten-fingers
       positionClass:"toast-bottom-right",
       closeButton:true,
       timeOut:2000,
-    })
+    }),
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
