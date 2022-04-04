@@ -67,7 +67,7 @@ export class TodoAppComponent implements OnInit {
     this.setItemToStorage()
   }
   checkAllTodosStatus(){
-    if(this.todos.find(t=>t.isDone==false)==null){
+    if(this.todos.length>0&&this.todos.every(t=>t.isDone==true)){
       this.isDone=true
     }
     else{
