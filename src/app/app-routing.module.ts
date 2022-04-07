@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BmiComponent } from './components/bmi-app/bmi/bmi.component';
 import { ChartAppComponent } from './components/chart-app/chart-app.component';
-import { CvMakerComponent } from './components/cv-maker/cv-maker.component';
 import { GithubReposAppComponent } from './components/github-repos-app/github-repos-app.component';
 import { HomeComponent } from './components/main-components/home/home.component';
 import { MarkdownEditorAppComponent } from './components/markdown-editor-app/markdown-editor-app.component';
@@ -19,8 +18,7 @@ const routes: Routes = [
     {path:"popular-movies",loadChildren:()=> import("./components/movie-app/movie-app-components/popular-movies/popular-movies.module")
     .then(module=>module.PopularMoviesModule)},
     {path:"favourite-movies",loadChildren :() => import("./components/movie-app/movie-app-components/favourite-movies/favourite-movies.module")
-    .then(module=>module.FavouriteMoviesModule)},
-    
+    .then(module=>module.FavouriteMoviesModule)}, 
   ]},
   {path:"randomquotes-app",component:RandomQuotesComponent},
   {path:"bmicalculator-app",component:BmiComponent},
@@ -31,7 +29,6 @@ const routes: Routes = [
   {path:"chart-app",component:ChartAppComponent},
   {path:"markdowneditor-app",component:MarkdownEditorAppComponent},
   {path:"tenfingers-app",component:TenFingersAppComponent},
-  {path:"cvmaker-app",component:CvMakerComponent}
 
 ];
 

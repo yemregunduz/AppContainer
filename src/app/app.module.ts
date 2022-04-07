@@ -24,8 +24,6 @@ import { MarkdownEditorAppComponent } from './components/markdown-editor-app/mar
 import { SanitizeHtmlPipe } from './components/markdown-editor-app/pipes/sanitize-html.pipe';
 import { TenFingersAppComponent } from './components/ten-fingers-app/ten-fingers-app.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { CvMakerComponent } from './components/cv-maker/cv-maker.component';
-
 
 
 @NgModule({
@@ -46,9 +44,6 @@ import { CvMakerComponent } from './components/cv-maker/cv-maker.component';
     MarkdownEditorAppComponent,
     SanitizeHtmlPipe,
     TenFingersAppComponent,
-    CvMakerComponent,
-
-
   ],
   imports: [
     BrowserModule,
