@@ -7,6 +7,7 @@ You can also access the live demo:  <a href="https://app-container.netlify.app" 
 - Weather App
 - Todo App
 - Bmi Calculator App
+- YEG Calculator App 
 - Random Quotes App
 - Github Repos App
 - Notes App

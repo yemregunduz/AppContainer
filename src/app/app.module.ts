@@ -13,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { WeatherAppComponent } from './components/weather-app/weather-app.component';
 import { DegreePipe } from './components/weather-app/pipes/degree.pipe';
 import { DateFormat } from './components/weather-app/pipes/date.pipe';
-import { MovieAppModule } from './components/movie-app/movie-app.module';
 import { GithubReposAppComponent } from './components/github-repos-app/github-repos-app.component';
 import { NotesAppComponent } from './components/notes-app/notes-app.component';
 import { FilterPipe } from './components/notes-app/pipes/filter.pipe';
@@ -24,6 +23,7 @@ import { MarkdownEditorAppComponent } from './components/markdown-editor-app/mar
 import { SanitizeHtmlPipe } from './components/markdown-editor-app/pipes/sanitize-html.pipe';
 import { TenFingersAppComponent } from './components/ten-fingers-app/ten-fingers-app.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { CalculatorAppComponent } from './components/calculator-app/calculator-app.component';
 
 
 @NgModule({
@@ -44,10 +44,10 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     MarkdownEditorAppComponent,
     SanitizeHtmlPipe,
     TenFingersAppComponent,
+    CalculatorAppComponent,
   ],
   imports: [
     BrowserModule,
-    MovieAppModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,

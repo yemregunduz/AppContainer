@@ -1,0 +1,56 @@
+.container{
+    max-width: 600px;
+    margin:10vh auto 0 auto;
+    box-shadow: 0px 0px 25px 12px rgba(153,153, 153, 1);
+}
+#result{
+    width: 100%;
+    text-align: right;
+    height: 70px;
+    margin: 15px 5px;
+    line-height: 70px;
+    padding: 16px 16px;
+    font-size: 25px;
+    border:0;
+    border-radius: 15px;
+    background-color: #dddd;
+}
+.button-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;    
+}
+.button-container>div{
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    line-height: 80px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    margin:5px 5px;
+    border-radius: 10px;
+    
+}
+.button{
+    background-color: #92a8d1;
+}
+.operator{
+    background-color: #deeaee;
+}
+.eval{
+    background-color: #5555ff;
+}
+.clear{ 
+    background-color: #deeaee;
+}
+.button:active{
+    transform: scale(0.95);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.54);
+}
+.button:hover{
+    opacity: 0.8;
+}
