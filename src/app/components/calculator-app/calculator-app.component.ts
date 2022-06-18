@@ -18,9 +18,10 @@ export class CalculatorAppComponent implements OnInit {
   buttons : Element[]
   ngOnInit(): void {
     this.getElements();
-    this.clickEvent()
+    this.handleClickEvent();
+    this.handleKeyboardEvent();
   }
-  clickEvent(){
+  handleClickEvent(){
     this.buttons.map(button=>{
       button.addEventListener('click',(e:any)=>{
         switch(button.className){
@@ -29,7 +30,6 @@ export class CalculatorAppComponent implements OnInit {
               this.resetCalculator();
             }
             else{
-              console.log( "çalış")
               this.deleteDigit();
             }
             break;
@@ -39,10 +39,25 @@ export class CalculatorAppComponent implements OnInit {
           case 'button eval':
             this.calculate();
             break;
-          default:
+          case 'button digit':
             this.updateDisplay(e.target.innerText);
             this.selectOperand();
             break;
+        }
+      })
+    })
+  }
+  handleKeyboardEvent(){
+    var keyboardValue=""
+    document.addEventListener('keydown',(event:KeyboardEvent)=>{
+      keyboardValue = this.keyboardInputRegulatory(event.key)
+      this.buttons.map((button:any)=>{
+        if(keyboardValue == button.innerHTML){
+          button.click();
+          button.classList.add("active")
+          setTimeout(()=>{
+            button.classList.remove("active")
+          },100) 
         }
       })
     })
@@ -76,11 +91,9 @@ export class CalculatorAppComponent implements OnInit {
   }
   handleFirstOperand(){
     this.calculator.firstOperand = this.calculator.displayValue
-    console.log("Foperand",this.calculator.firstOperand)
   }
   handleSecondOperand(){
     this.calculator.secondOperand = this.calculator.displayValue
-    console.log("Soperand",this.calculator.secondOperand)
   }
   selectOperand(){
     if(this.calculator.operator.length==0){
@@ -114,7 +127,6 @@ export class CalculatorAppComponent implements OnInit {
           this.calculator.displayValue = (parseFloat(this.calculator.firstOperand)/ parseFloat(this.calculator.secondOperand)).toString();
           break;
         case '^':
-          console.log(Math.pow(parseFloat(this.calculator.firstOperand),parseFloat(this.calculator.secondOperand)))
           this.calculator.displayValue = Math.pow(parseFloat(this.calculator.firstOperand),parseFloat(this.calculator.secondOperand)).toString();
           break;
       }
@@ -150,6 +162,17 @@ export class CalculatorAppComponent implements OnInit {
        this.handleFirstOperand(); 
     }
   }
-
+  keyboardInputRegulatory(keyboardValue:string){
+    if(keyboardValue == "Backspace"){
+      keyboardValue = "←"
+    }
+    if(keyboardValue == "Enter"){
+      keyboardValue = "="
+    }
+    if(keyboardValue == "c"){
+      keyboardValue = "C"
+    }
+    return keyboardValue;
+  }
 
 }
