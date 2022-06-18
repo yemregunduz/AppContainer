@@ -24,6 +24,7 @@ import { SanitizeHtmlPipe } from './components/markdown-editor-app/pipes/sanitiz
 import { TenFingersAppComponent } from './components/ten-fingers-app/ten-fingers-app.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { CalculatorAppComponent } from './components/calculator-app/calculator-app.component';
+import { PairOfPhotosAppComponent } from './components/pair-of-photos-app/pair-of-photos-app.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { CalculatorAppComponent } from './components/calculator-app/calculator-a
     SanitizeHtmlPipe,
     TenFingersAppComponent,
     CalculatorAppComponent,
+    PairOfPhotosAppComponent,
   ],
   imports: [
     BrowserModule,

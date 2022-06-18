@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="card-container" style="background-color: red;">
+        <div class="card" [attr.id]="cardImage.id" *ngFor="let cardImage of cardImages ;index as indexOfelement">
+            <img class="card-image" *ngIf="cardImage.isSelected" src="../../../assets/pairofphotos/default-image.png"/>
+            <img class="card-image" *ngIf="!cardImage.isSelected" [src]="cardImage.imageUrl"/>
+        </div>
+    </div>
+</div>
