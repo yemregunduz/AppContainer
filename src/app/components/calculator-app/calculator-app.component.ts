@@ -13,6 +13,7 @@ export class CalculatorAppComponent implements OnInit {
     secondOperand:"",
     displayValue:"0",
     operator:"",
+    formattedDisplayedValue:"0",
     waitForSecondOperand:false
   }
   buttons : Element[]
@@ -50,7 +51,7 @@ export class CalculatorAppComponent implements OnInit {
   handleKeyboardEvent(){
     var keyboardValue=""
     document.addEventListener('keydown',(event:KeyboardEvent)=>{
-      keyboardValue = this.keyboardInputRegulatory(event.key)
+      keyboardValue = this.regulateKeyboardInput(event.key)
       this.buttons.map((button:any)=>{
         if(keyboardValue == button.innerHTML){
           button.click();
@@ -82,12 +83,13 @@ export class CalculatorAppComponent implements OnInit {
       this.calculator.waitForSecondOperand = false;
     }
     if(value=="." && this.calculator.displayValue.includes(".")){
-      value="";
+      return
     }
     if(this.calculator.displayValue == "0" && value != "."&& this.calculator.displayValue.length == 1){
       this.calculator.displayValue = this.calculator.displayValue.substring(1);
     }
     this.calculator.displayValue +=value;
+    this.formatDisplayValue()
   }
   handleFirstOperand(){
     this.calculator.firstOperand = this.calculator.displayValue
@@ -131,6 +133,7 @@ export class CalculatorAppComponent implements OnInit {
           break;
       }
     }
+    this.formatDisplayValue();
     this.checkOverflowing();
     
   }
@@ -139,6 +142,7 @@ export class CalculatorAppComponent implements OnInit {
       firstOperand: "", 
       secondOperand:"",
       displayValue:"0",
+      formattedDisplayedValue:"0",
       waitForSecondOperand:false,
       operator:""
     }
@@ -151,6 +155,7 @@ export class CalculatorAppComponent implements OnInit {
       else{
         this.calculator.displayValue = "0"
       }
+      this.formatDisplayValue();
       this.selectOperand();
     }
   }
@@ -162,7 +167,7 @@ export class CalculatorAppComponent implements OnInit {
        this.handleFirstOperand(); 
     }
   }
-  keyboardInputRegulatory(keyboardValue:string){
+  regulateKeyboardInput(keyboardValue:string){
     if(keyboardValue == "Backspace"){
       keyboardValue = "←"
     }
@@ -173,6 +178,15 @@ export class CalculatorAppComponent implements OnInit {
       keyboardValue = "C"
     }
     return keyboardValue;
+  }
+  formatDisplayValue() {
+    this.calculator.formattedDisplayedValue=this.calculator.displayValue.replace(".",",").replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    if(this.calculator.formattedDisplayedValue.includes(",")){
+      let dotIndex = this.calculator.displayValue.indexOf(".")
+      let virguleIndex = this.calculator.formattedDisplayedValue.indexOf(",")
+      this.calculator.formattedDisplayedValue =this.calculator.formattedDisplayedValue.substring(0,virguleIndex+1)
+      + this.calculator.displayValue.substring(dotIndex+1,this.calculator.displayValue.length)
+    }
   }
 
 }
