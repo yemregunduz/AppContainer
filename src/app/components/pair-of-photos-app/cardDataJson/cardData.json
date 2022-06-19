@@ -1,0 +1,92 @@
+[
+   {
+      "id": 0,
+      "imageUrl": "../../../assets/pairofphotos/komurcu-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 1,
+      "imageUrl": "../../../assets/pairofphotos/komurcu-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 2,
+      "imageUrl": "../../../assets/pairofphotos/cat-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 3,
+      "imageUrl": "../../../assets/pairofphotos/cat-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 4,
+      "imageUrl": "../../../assets/pairofphotos/crocodile-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 5,
+      "imageUrl": "../../../assets/pairofphotos/crocodile-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 6,
+      "imageUrl": "../../../assets/pairofphotos/flower-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 7,
+      "imageUrl": "../../../assets/pairofphotos/flower-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 8,
+      "imageUrl": "../../../assets/pairofphotos/kemal-sunal-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 9,
+      "imageUrl": "../../../assets/pairofphotos/kemal-sunal-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 10,
+      "imageUrl": "../../../assets/pairofphotos/memati-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 11,
+      "imageUrl": "../../../assets/pairofphotos/memati-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 12,
+      "imageUrl": "../../../assets/pairofphotos/ataturk-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 13,
+      "imageUrl": "../../../assets/pairofphotos/ataturk-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 14,
+      "imageUrl": "../../../assets/pairofphotos/monkey-image.jpeg",
+      "isSelected": false
+   },
+   {
+      "id": 15,
+      "imageUrl": "../../../assets/pairofphotos/monkey-image.jpeg",
+      "isSelected": false
+   },
+   {
+      "id": 16,
+      "imageUrl": "../../../assets/pairofphotos/zootopia-image.jpg",
+      "isSelected": false
+   },
+   {
+      "id": 17,
+      "imageUrl": "../../../assets/pairofphotos/zootopia-image.jpg",
+      "isSelected": false
+   }
+]

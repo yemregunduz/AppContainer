@@ -7,6 +7,7 @@ import { GithubReposAppComponent } from './components/github-repos-app/github-re
 import { HomeComponent } from './components/main-components/home/home.component';
 import { MarkdownEditorAppComponent } from './components/markdown-editor-app/markdown-editor-app.component';
 import { NotesAppComponent } from './components/notes-app/notes-app.component';
+import { PairOfPhotosAppComponent } from './components/pair-of-photos-app/pair-of-photos-app.component';
 import { RandomQuotesComponent } from './components/random-quotes/random-quotes.component';
 import { TenFingersAppComponent } from './components/ten-fingers-app/ten-fingers-app.component';
 import { TodoAppComponent } from './components/todo-app/todo-app/todo-app.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:"chart-app",component:ChartAppComponent},
   {path:"markdowneditor-app",component:MarkdownEditorAppComponent},
   {path:"tenfingers-app",component:TenFingersAppComponent},
+  {path:"pair-of-photos-app",component: PairOfPhotosAppComponent},
 
 ];
 

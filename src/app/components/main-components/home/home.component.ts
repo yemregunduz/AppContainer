@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
     {name:"Ten Fingers App",primaryColor:'white',secondaryColor:" #bb7171",description:"Improve your typing speed.", srcImage:"./assets/images/tenFingers-app.png",routerLink:"tenfingers-app"},
     {name:"Todo App",primaryColor:'#ff6793',secondaryColor:"rgba(0, 0, 0, .8)",description:"A basic todo app",srcImage:"./assets/images/todo-app.png",routerLink:"todo-app"},
     {name:"Weather App",primaryColor:'white',secondaryColor:"#4B515D",description:"You can get weather information from this application.", srcImage:"./assets/images/weather-app.png",routerLink:"weather-app"},
+    {name:"Pair Of Photos",primaryColor:'#ddd',secondaryColor:"crimson",description:"A simple photo matching game. Have fun!", srcImage:"./assets/images/pair-of-photos-app.png",routerLink:"pair-of-photos-app"},
     {name:"Chart App",primaryColor:'#79c2d0',secondaryColor:"#393e46",description:"You can create dynamic charts with the column names in the excel you have uploaded.", srcImage:"./assets/images/chart-app.png",routerLink:"chart-app"},
     {name:"BMI Calculator",primaryColor:'#a9c25d',secondaryColor:"#AAAAAA",description:"You can calculate your body mass index.", srcImage:"./assets/images/bmiCalculator-app.png",routerLink:"bmicalculator-app"},
     {name:"YEG Calculator",primaryColor:'white',secondaryColor:"#92a8d1",description:"Basic calculator app. (will continue to be developed)", srcImage:"./assets/images/yeg-calculator-app.png",routerLink:"calculator-app"},

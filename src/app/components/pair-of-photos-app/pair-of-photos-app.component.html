@@ -1,8 +1,10 @@
 <div class="container">
-    <div class="card-container" style="background-color: red;">
-        <div class="card" [attr.id]="cardImage.id" *ngFor="let cardImage of cardImages ;index as indexOfelement">
-            <img class="card-image" *ngIf="cardImage.isSelected" src="../../../assets/pairofphotos/default-image.png"/>
-            <img class="card-image" *ngIf="!cardImage.isSelected" [src]="cardImage.imageUrl"/>
+    <span class="counter"><h4 style="color: #ddd;">Timer: {{counter}} s</h4></span>
+    
+    <div class="card-container" >
+        <div class="card"  [attr.id]="cardImage.id"  (click)="!isCounterStart && startCounter()" *ngFor="let cardImage of cardImages" (click)="!waitForResult && !cardImage.isSelected && clickOnCardEvent(cardImage)">
+            <img class="card-image" *ngIf="!cardImage.isSelected" src="../../../assets/pairofphotos/default-image.png"/>
+            <img class="card-image" *ngIf="cardImage.isSelected" [src]="cardImage.imageUrl"/>
         </div>
     </div>
 </div>
