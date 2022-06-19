@@ -12,7 +12,8 @@ You can also access the live demo:  <a href="https://app-container.netlify.app" 
 - Github Repos App
 - Notes App
 - Chart App
-- Markdown Editor App (Continue to be developed)
+- Pair Of Photos App
+- Markdown Editor App
 ------------
 
 
