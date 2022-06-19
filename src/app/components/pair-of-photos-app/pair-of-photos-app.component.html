@@ -1,10 +1,17 @@
-<div class="container">
-    <span class="counter"><h4 style="color: #ddd;">Timer: {{counter}} s</h4></span>
-    
-    <div class="card-container" >
-        <div class="card"  [attr.id]="cardImage.id"  (click)="!isCounterStart && startCounter()" *ngFor="let cardImage of cardImages" (click)="!waitForResult && !cardImage.isSelected && clickOnCardEvent(cardImage)">
-            <img class="card-image" *ngIf="!cardImage.isSelected" src="../../../assets/pairofphotos/default-image.png"/>
-            <img class="card-image" *ngIf="cardImage.isSelected" [src]="cardImage.imageUrl"/>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <span class="counter-span">
+                <h4 style="color: #ddd;">Timer: {{counter}} s</h4>
+            </span>
+            <button class="play-again-button" (click)="playAgain()"><h4>Play Again</h4></button>
+        </div>
+        
+        <div class="card-container" >
+            <div class="card"  [attr.id]="cardImage.id"  (click)="!isCounterStart && startCounter()" *ngFor="let cardImage of cardImages" (click)="!waitForResult && !cardImage.isSelected && clickOnCardEvent(cardImage)">
+                <img class="card-image" *ngIf="!cardImage.isSelected" src="../../../assets/pairofphotos/default-image.png"/>
+                <img class="card-image" *ngIf="cardImage.isSelected" [src]="cardImage.imageUrl"/>
+            </div>
         </div>
     </div>
-</div>
+</body>

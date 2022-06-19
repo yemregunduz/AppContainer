@@ -17,7 +17,6 @@ export class PairOfPhotosAppComponent implements OnInit {
   cards: Element[];
   ngOnInit(): void {
     this.shuffle();
-    console.log(this.cardImages)
   }
   clickOnCardEvent(cardImage: CardImage) {
     this.selectedCards.push(cardImage);
@@ -59,7 +58,6 @@ export class PairOfPhotosAppComponent implements OnInit {
     this.isCounterStart=true
     this.interval = setInterval(()=>{
         this.counter++
-        console.log(this.cardImages.every(a=>a.isSelected == true))
         if(this.cardImages.every(a=>a.isSelected == true)){
           this.stopCounter();
         }
@@ -67,5 +65,20 @@ export class PairOfPhotosAppComponent implements OnInit {
   }
   stopCounter(){
     clearInterval(this.interval)
+    this.isCounterStart = false;
   }
+  resetCounter(){
+    this.counter=0;
+    this.stopCounter();
+  }
+  playAgain(){
+    this.shuffle();
+    this.cardImages.forEach(cardImage => {
+      if(cardImage.isSelected==true){
+        cardImage.isSelected = false
+      }
+    });
+    this.resetCounter();
+  }
+  
 }

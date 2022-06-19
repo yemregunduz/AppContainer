@@ -19,7 +19,6 @@ export class NotesAppComponent implements OnInit {
   }
   changeSelectedColor(color:string){
     this.selectedColor = color;
-    console.log(this.selectedColor)
   }
   getNotesFromStorage(){
     let notesFromStorage = localStorage.getItem("notes");
