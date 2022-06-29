@@ -26,7 +26,6 @@ const routes: Routes = [
   {path:"markdowneditor-app",component:MarkdownEditorAppComponent},
   {path:"tenfingers-app",component:TenFingersAppComponent},
   {path:"pair-of-photos-app",component: PairOfPhotosAppComponent},
-
 ];
 
 @NgModule({
