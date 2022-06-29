@@ -1,0 +1,64 @@
+body{
+    min-height: 400vh;
+    background: linear-gradient(to right, green, #1f6781);
+}
+.container{
+    padding: 20px;
+    height: 98vh;
+    
+}
+.inner-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.text-input{
+    width: 400px;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 10px 0px 0px 10px;
+    border:none
+}
+.text-input:focus{
+    outline: none;
+}
+.search-button{
+    border: none;
+    padding:5px 12px;
+    color: #1f6781;
+    border-radius: 0px 10px 10px 0px ;
+}
+.card{
+    margin-top:10px;
+    width: 270px;
+    min-height: 240px;
+}
+.meal-thumb{
+    width: 235px;
+    border-radius: 10px;
+}
+.card-header{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    height: 105px;
+}
+.card-footer{
+    display: flex;
+    justify-content: center;
+}
+.meal-button{
+    border:none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    background-color:#1f6781 ;
+}
+.meal-button:hover{
+    background-color: green;
+    transform: scale(105%);
+    transition: 1s
+}

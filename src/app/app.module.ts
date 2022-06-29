@@ -27,6 +27,7 @@ import { CalculatorAppComponent } from './components/calculator-app/calculator-a
 import { PairOfPhotosAppComponent } from './components/pair-of-photos-app/pair-of-photos-app.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PhotoGalleryAppComponent } from './components/photo-gallery-app/photo-gallery-app.component';
+import { RecipeFinderAppComponent } from './components/recipe-finder-app/recipe-finder-app.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { PhotoGalleryAppComponent } from './components/photo-gallery-app/photo-g
     PairOfPhotosAppComponent,
     NotFoundComponent,
     PhotoGalleryAppComponent,
+    RecipeFinderAppComponent,
   ],
   imports: [
     BrowserModule,
