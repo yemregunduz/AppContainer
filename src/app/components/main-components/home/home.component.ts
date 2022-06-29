@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
     {name:"Random Quotes",primaryColor:'#8d9db6',secondaryColor:"#b6bcc2cb",description:"You can generate a random quote for sharing", srcImage:"./assets/images/randomQuotes-app.png",routerLink:"randomquotes-app"},
     {name:"Markdown Editor App",primaryColor:'  #ffcbcb',secondaryColor:"#347474 ",description:"A basic markdown previewer and downloader", srcImage:"./assets/images/markdownEditor-app.png",routerLink:"markdowneditor-app"},
     {name:"GitRepos App",primaryColor:'#ff5000',secondaryColor:"#1379bb",description:"You can list users' public repositories on github.", srcImage:"./assets/images/github-repos-app.png",routerLink:"githubrepos-app"},
+    {name:"Love App",primaryColor:'white',secondaryColor:"violet",description:"A simple photo album application that I made to celebrate our anniversary with my girlfriend.", srcImage:"./assets/images/photoGallery-app.png",routerLink:"love-app"},
   
   ]
   ngOnInit(): void {
