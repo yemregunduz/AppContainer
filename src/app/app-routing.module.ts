@@ -6,6 +6,7 @@ import { ChartAppComponent } from './components/chart-app/chart-app.component';
 import { GithubReposAppComponent } from './components/github-repos-app/github-repos-app.component';
 import { HomeComponent } from './components/main-components/home/home.component';
 import { MarkdownEditorAppComponent } from './components/markdown-editor-app/markdown-editor-app.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NotesAppComponent } from './components/notes-app/notes-app.component';
 import { PairOfPhotosAppComponent } from './components/pair-of-photos-app/pair-of-photos-app.component';
 import { RandomQuotesComponent } from './components/random-quotes/random-quotes.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:"markdowneditor-app",component:MarkdownEditorAppComponent},
   {path:"tenfingers-app",component:TenFingersAppComponent},
   {path:"pair-of-photos-app",component: PairOfPhotosAppComponent},
+  {path: '**', component:NotFoundComponent }
 ];
 
 @NgModule({

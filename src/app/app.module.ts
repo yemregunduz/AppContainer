@@ -25,7 +25,7 @@ import { TenFingersAppComponent } from './components/ten-fingers-app/ten-fingers
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { CalculatorAppComponent } from './components/calculator-app/calculator-app.component';
 import { PairOfPhotosAppComponent } from './components/pair-of-photos-app/pair-of-photos-app.component';
-import { RecipeAppModule } from './components/recipe-app/recipe-app.module';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 @NgModule({
@@ -48,6 +48,7 @@ import { RecipeAppModule } from './components/recipe-app/recipe-app.module';
     TenFingersAppComponent,
     CalculatorAppComponent,
     PairOfPhotosAppComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,8 +62,7 @@ import { RecipeAppModule } from './components/recipe-app/recipe-app.module';
       closeButton:true,
       timeOut:2000,
     }),
-    NgxSpinnerModule,
-    RecipeAppModule
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
