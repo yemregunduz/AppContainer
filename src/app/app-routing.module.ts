@@ -9,13 +9,14 @@ import { MarkdownEditorAppComponent } from './components/markdown-editor-app/mar
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NotesAppComponent } from './components/notes-app/notes-app.component';
 import { PairOfPhotosAppComponent } from './components/pair-of-photos-app/pair-of-photos-app.component';
+import { PhotoGalleryAppComponent } from './components/photo-gallery-app/photo-gallery-app.component';
 import { RandomQuotesComponent } from './components/random-quotes/random-quotes.component';
 import { TenFingersAppComponent } from './components/ten-fingers-app/ten-fingers-app.component';
 import { TodoAppComponent } from './components/todo-app/todo-app/todo-app.component';
 import { WeatherAppComponent } from './components/weather-app/weather-app.component';
 
 const routes: Routes = [
-  {path:"",component:HomeComponent},
+  {path:"",component:PhotoGalleryAppComponent},
   {path:"calculator-app",component:CalculatorAppComponent},
   {path:"randomquotes-app",component:RandomQuotesComponent},
   {path:"bmicalculator-app",component:BmiComponent},

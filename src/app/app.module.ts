@@ -26,6 +26,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { CalculatorAppComponent } from './components/calculator-app/calculator-app.component';
 import { PairOfPhotosAppComponent } from './components/pair-of-photos-app/pair-of-photos-app.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { PhotoGalleryAppComponent } from './components/photo-gallery-app/photo-gallery-app.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     CalculatorAppComponent,
     PairOfPhotosAppComponent,
     NotFoundComponent,
+    PhotoGalleryAppComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,8 @@
+    
+    <div class="gallery-container">
+        <div class="gallery-card" *ngFor="let photo of photos"  [ngStyle]="{'background-image': 'url(' + photo.url + ')'}" >
+            <h3 class="text">{{photo.text}}</h3>
+        </div>
+       
+    </div>
+    

@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    padding: 0;
+    background-image: linear-gradient(to right,violet,white);
+    overflow-x: hidden;
+}
+.gallery-container{
+    display: flex;
+    padding: 20px;
+    height: 100vh;
+    justify-content: center;
+}
+.gallery-card{
+    flex:0.1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 10px;
+    border-radius: 50px;
+    transition: flex 1s ease-in;
+    cursor: pointer;
+}
+.active{
+    flex:3;
+}
+.text{
+    padding: 5px 15px;
+    font-size: 3rem;
+    color: black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 15px;
+    left: 45%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in 0.4s;
+}
+.active > h3{
+    opacity: 0.6;
+}
