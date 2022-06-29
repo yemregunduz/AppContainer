@@ -18,7 +18,7 @@ You can also access the live demo:  <a href="https://app-container.netlify.app" 
 
 
 #### Get Started
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
 
 #### Installation Process
 Run npm install to install all the required dependencies
