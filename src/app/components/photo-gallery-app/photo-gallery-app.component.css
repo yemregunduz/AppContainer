@@ -13,7 +13,6 @@
 }
 .gallery-card{
     flex:0.1;
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -23,7 +22,9 @@
     cursor: pointer;
 }
 .active{
-    flex:3;
+    flex:1;
+    background-size: contain;
+
 }
 .text{
     padding: 5px 15px;
