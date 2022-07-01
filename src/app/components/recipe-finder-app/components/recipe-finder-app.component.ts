@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Meal } from './models/meal';
-import { RecipeService } from './services/recipe.service';
+import { Meal } from '../models/meal';
+import { RecipeService } from '../services/recipe.service';
 
 @Component({
   selector: 'app-recipe-finder-app',
@@ -14,7 +14,6 @@ export class RecipeFinderAppComponent implements OnInit {
   meals :Meal = new Meal();
 
   ngOnInit(): void {
-    this.getRandomRecipe();
   }
   getRandomRecipe(){
     this.recipeService.getRandomMeal().subscribe(response=>{
@@ -28,10 +27,6 @@ export class RecipeFinderAppComponent implements OnInit {
       console.log(this.meals)
     })
   }
-  getRecipeById(){
-    this.recipeService.getMealById("1").subscribe(response=>{
-      this.meals = response;
-    })
-  }
+
 
 }

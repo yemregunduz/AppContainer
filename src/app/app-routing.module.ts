@@ -11,12 +11,15 @@ import { NotesAppComponent } from './components/notes-app/notes-app.component';
 import { PairOfPhotosAppComponent } from './components/pair-of-photos-app/pair-of-photos-app.component';
 import { PhotoGalleryAppComponent } from './components/photo-gallery-app/photo-gallery-app.component';
 import { RandomQuotesComponent } from './components/random-quotes/random-quotes.component';
+import { RecipeDetailComponent } from './components/recipe-finder-app/components/recipe-detail/recipe-detail.component';
+import { RecipeFinderAppComponent } from './components/recipe-finder-app/components/recipe-finder-app.component';
 import { TenFingersAppComponent } from './components/ten-fingers-app/ten-fingers-app.component';
 import { TodoAppComponent } from './components/todo-app/todo-app/todo-app.component';
 import { WeatherAppComponent } from './components/weather-app/weather-app.component';
 
 const routes: Routes = [
-  {path:"",component:HomeComponent},
+  {path:"",component:RecipeFinderAppComponent},
+  {path:"recipeDetails/:mealId",component:RecipeDetailComponent},
   {path:"calculator-app",component:CalculatorAppComponent},
   {path:"randomquotes-app",component:RandomQuotesComponent},
   {path:"bmicalculator-app",component:BmiComponent},
@@ -29,7 +32,7 @@ const routes: Routes = [
   {path:"tenfingers-app",component:TenFingersAppComponent},
   {path:"pair-of-photos-app",component: PairOfPhotosAppComponent},
   {path:"love-app",component:PhotoGalleryAppComponent},
-  {path: '**', component:NotFoundComponent }
+  // {path: '**', component:NotFoundComponent }
 ];
 
 @NgModule({

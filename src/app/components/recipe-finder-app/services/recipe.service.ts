@@ -20,7 +20,7 @@ export class RecipeService {
     return this.httpClient.get<Meal>(url);
   }
   getMealById(id:string){
-    let url = this.url+"lookup.php?i"+id
+    let url = this.url+"lookup.php?i="+id
     return this.httpClient.get<Meal>(url);
   }
 }

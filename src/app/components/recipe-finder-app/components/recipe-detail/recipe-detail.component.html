@@ -1,0 +1,20 @@
+<body>
+    <div class="container"*ngFor="let meal of meal.meals">
+        <img class="meal-thumb" [src]="meal.strMealThumb"/>
+        <div class="card" >
+            <div class="card-body">
+                <div style="justify-content: center;align-items: center; display: flex;" class="info-container">
+                    <h3 class="title-text">{{meal.strMeal}}</h3>
+                    <h5 class="area-text">({{meal.strArea}})</h5>
+                </div>
+                <div class="row">
+                    <div class="col-md-auto" *ngFor="let item of [].constructor(20);let i = index">
+                        <span  >{{meal["strIngredient1"]}} : {{meal.strMeasure1}}}</span>
+                    </div>
+                </div>
+                <hr>    
+                <p class="instructions-text">{{meal.strInstructions}}</p>
+            </div>
+        </div>
+    </div>
+</body>

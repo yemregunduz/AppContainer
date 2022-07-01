@@ -1,0 +1,21 @@
+body{
+    min-height: 100vh;
+    height: auto;
+    background: linear-gradient(to right, green, #1f6781);
+    box-sizing: border-box;
+}
+.container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 80%;
+}
+.meal-thumb{
+    width: 80%;
+    height: 400px;
+    margin-bottom: 2rem;
+}
