@@ -20,7 +20,7 @@ import { WeatherAppComponent } from './components/weather-app/weather-app.compon
 const routes: Routes = [
   {path:"",component:HomeComponent},
   {path:"recipe-app",component:RecipeFinderAppComponent},
-  {path:"recipeDetails/:mealId",component:RecipeDetailComponent},
+  {path:"recipe-app/recipeDetails/:mealId",component:RecipeDetailComponent},
   {path:"calculator-app",component:CalculatorAppComponent},
   {path:"randomquotes-app",component:RandomQuotesComponent},
   {path:"bmicalculator-app",component:BmiComponent},

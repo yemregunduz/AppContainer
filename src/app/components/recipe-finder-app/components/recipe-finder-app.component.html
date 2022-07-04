@@ -7,15 +7,13 @@
         </div>
         <div class="row"  >
             <div class="col-md-auto" *ngFor="let meal of meals.meals">
-                    <div class="card" routerLink="/recipeDetails/{{meal.idMeal}}">
+                    <div class="card" routerLink="/recipe-app/recipeDetails/{{meal.idMeal}}">
                         <div class="card-body">
                             <img class="meal-thumb" [src]="meal.strMealThumb"/>
-
                         </div>
                         <div class="card-footer">{{meal.strMeal}}</div>
                     </div>
             </div>
         </div>
-       
     </div>
 </body>
