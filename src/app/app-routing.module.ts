@@ -18,7 +18,8 @@ import { TodoAppComponent } from './components/todo-app/todo-app/todo-app.compon
 import { WeatherAppComponent } from './components/weather-app/weather-app.component';
 
 const routes: Routes = [
-  {path:"",component:RecipeFinderAppComponent},
+  {path:"",component:HomeComponent},
+  {path:"recipe-app",component:RecipeFinderAppComponent},
   {path:"recipeDetails/:mealId",component:RecipeDetailComponent},
   {path:"calculator-app",component:CalculatorAppComponent},
   {path:"randomquotes-app",component:RandomQuotesComponent},
@@ -32,11 +33,11 @@ const routes: Routes = [
   {path:"tenfingers-app",component:TenFingersAppComponent},
   {path:"pair-of-photos-app",component: PairOfPhotosAppComponent},
   {path:"love-app",component:PhotoGalleryAppComponent},
-  // {path: '**', component:NotFoundComponent }
+  {path: '**', component:NotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,19 +1,28 @@
-<body>
-    <div class="container"*ngFor="let meal of meal.meals">
-        <img class="meal-thumb" [src]="meal.strMealThumb"/>
+<body *ngFor="let meal of meal.meals" [ngStyle]="{'background-image': 'url(' + meal.strMealThumb + ')'}" >
+    <div class="container">
+        <img class="meal-thumb mobile" [src]="meal.strMealThumb"/>
         <div class="card" >
             <div class="card-body">
-                <div style="justify-content: center;align-items: center; display: flex;" class="info-container">
+                <div class="info-container">
                     <h3 class="title-text">{{meal.strMeal}}</h3>
-                    <h5 class="area-text">({{meal.strArea}})</h5>
+                    <h5 class="area-text">({{meal.strArea}} , {{meal.strCategory}})</h5>
                 </div>
+                <hr>
                 <div class="row">
-                    <div class="col-md-auto" *ngFor="let item of [].constructor(20);let i = index">
-                        <span  >{{meal["strIngredient1"]}} : {{meal.strMeasure1}}}</span>
+
+                    <div class="ingredient-container" >
+                        <ul class="ingredient-list">
+                            <li *ngFor="let ingredient of ingredients" style="margin-right: 2px;">
+                                <span ><span class="ingredient-text">{{ingredient.ingredient}} : </span>{{ingredient.measure}}</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <hr>    
                 <p class="instructions-text">{{meal.strInstructions}}</p>
+            </div>
+            <div class="card-footer">
+                <a [href]="meal.strYoutube"  class="youtube-link" target="_blank">Watch on YouTube</a>
             </div>
         </div>
     </div>

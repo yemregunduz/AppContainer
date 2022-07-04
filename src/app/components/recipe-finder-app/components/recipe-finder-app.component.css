@@ -46,7 +46,6 @@ body{
     transform: scale(90%);
 }
 .card{
-    position: relative;
     margin-bottom: 7%;
     width: 270px;
     min-height: 240px;
@@ -90,4 +89,15 @@ body{
     background-color: green;
     transform: scale(105%);
     transition: 1s
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+@media only screen and (max-width:768px){
+    .col-md-auto{
+        display: flex;
+        justify-content: center;
+        
+    }
 }

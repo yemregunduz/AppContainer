@@ -11,7 +11,8 @@ import { RecipeService } from '../../services/recipe.service';
 export class RecipeDetailComponent implements OnInit {
 
   constructor(private activatedRoute:ActivatedRoute,private recipeService:RecipeService) { }
-  meal : Meal = new Meal()
+  meal : any = []
+  ingredients:any[] =[];
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params=>{
       if (params["mealId"]) {
@@ -21,11 +22,16 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   getRecipeById(idMeal:string){
-    console.log(idMeal)
     this.recipeService.getMealById(idMeal).subscribe(response=>{
       this.meal = response;
+      for (let i = 1; i <= 20; i++) {
+        let ingredient = this.meal.meals[0][`strIngredient${i}`]
+        let measure = this.meal.meals[0][`strMeasure${i}`]
 
-      console.log(response)
+        if( ingredient.length>0){
+          this.ingredients.push({ingredient,measure})
+        }
+      }
     })
   }
 
