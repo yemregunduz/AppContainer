@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   apps:AppModel[]= [
     {name:"Ten Fingers App",primaryColor:'white',secondaryColor:" #bb7171",description:"Improve your typing speed.", srcImage:"./assets/images/tenFingers-app.png",routerLink:"tenfingers-app"},
-    {name:"Recipe Finder App",primaryColor:'#ddd',secondaryColor:"#1f6781",description:"A simple photo matching game. Have fun!", srcImage:"./assets/images/recipe-app.png",routerLink:"recipe-app"},
+    {name:"Recipe Finder App",primaryColor:'#ddd',secondaryColor:"#1f6781",description:"A simple application where you can access the recipes of various regions", srcImage:"./assets/images/recipe-app.png",routerLink:"recipe-app"},
     {name:"Todo App",primaryColor:'#ff6793',secondaryColor:"rgba(0, 0, 0, .8)",description:"A basic todo app",srcImage:"./assets/images/todo-app.png",routerLink:"todo-app"},
     {name:"Weather App",primaryColor:'white',secondaryColor:"#4B515D",description:"You can get weather information from this application.", srcImage:"./assets/images/weather-app.png",routerLink:"weather-app"},
     {name:"Pair Of Photos",primaryColor:'#ddd',secondaryColor:"crimson",description:"A simple photo matching game. Have fun!", srcImage:"./assets/images/pair-of-photos-app.png",routerLink:"pair-of-photos-app"},
