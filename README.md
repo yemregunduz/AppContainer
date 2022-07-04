@@ -6,7 +6,7 @@ You can also access the live demo:  <a href="https://app-container.netlify.app" 
 - [Ten Fingers App](https://app-container.netlify.app/tenfingers-app)
 - [Weather App](https://app-container.netlify.app/weather-app)
 - [Todo App](https://app-container.netlify.app/todo-app)
-- [Recipe Finder App](https://app-container.netfily.app/recipe-app)
+- [Recipe Finder App](https://app-container.netlify.app/recipe-app)
 - [Bmi Calculator App](https://app-container.netlify.app/bmicalculator-app)
 - [YEG Calculator App](https://app-container.netlify.app/calculator-app)
 - [Random Quotes App](https://app-container.netlify.app/randomquotes-app)
