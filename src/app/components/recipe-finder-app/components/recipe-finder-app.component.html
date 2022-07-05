@@ -1,7 +1,7 @@
 <body>
     <div class="container"  >
         <div class="inner-container" >
-            <input type="text" [(ngModel)]="keyword" placeholder="Enter a keyword" (keyup.enter)="getRecipeByKeyword()" class="text-input" autofocus/>
+            <input type="text" [(ngModel)]="keyword" placeholder="Enter a keyword (ex: Tomato, egg etc..)" (keyup.enter)="getRecipeByKeyword()" class="text-input" autofocus/>
             <button type="button" class="search-button" (click)="getRecipeByKeyword()"><i class="fas fa-search"></i></button>
             <button type="button" class="shuffle-button" (click)="getRandomRecipe()"><i class="fas fa-random"></i></button>
         </div>

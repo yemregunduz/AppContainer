@@ -1,0 +1,21 @@
+.scroll-up{
+    position: fixed;
+    visibility: hidden;
+    left: 50%;
+    top:15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: white;
+    background-color: cadetblue;
+    z-index: 99999;
+}
+.scroll-up:hover { 
+    transform: scale(110%);
+    transition: opacity 1s;
+}
