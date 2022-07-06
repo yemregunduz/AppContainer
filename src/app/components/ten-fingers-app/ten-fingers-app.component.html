@@ -1,18 +1,18 @@
 <body>
-  <div class="app-container">
+  <div class="container">
     <div class="row" >
-        <div class="card">
+        <div class="card" style="min-width: 302px;padding:0px">
             <div class="card-header">
                 <h3 style="text-align:center;color: #bb7171;">10 Fingers Test & Practice</h3>
                 <h6 style="text-align: center;"><small>(Confirmation key: SPACE)</small></h6>
             </div>
-            <div class="card-body" *ngIf="words.length>0">
+            <div class="card-body" style="padding:16px 3px" *ngIf="words.length>0">
                 <h3><span [attr.id]="'word'+i" [ngClass]="words[index]==words[i]? 'badge bg-secondary' : 'badge'" *ngFor="let word of randomWords; let i=index">{{word.inEnglish}}</span></h3>
             </div>
             <div class="card-footer">
-                <input type="text" id="wordInput" [(ngModel)]="selectedWord" (keyup)="checkLettersMatch(index)"  (keyup.space)="checkWordsMatch(index)" (keypress)="startCountdown()">
+                <input type="text" class="text-input" id="wordInput" [(ngModel)]="selectedWord" (keyup)="checkLettersMatch(index)"  (keyup.space)="checkWordsMatch(index)" (keypress)="startCountdown()">
                 <button class="reset-button" (click)="restartGame()"><b></b><i style="margin-left: 3px;" class="fas fa-retweet fa-lg" ></i></button>
-                <span ><b>{{counter}}</b></span>
+                <span class="counter">{{counter}}</span>
             </div>
         </div>
     </div>
